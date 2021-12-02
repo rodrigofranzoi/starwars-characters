@@ -1,0 +1,6 @@
+framework module Pods_starwars_prozi {
+  umbrella header "Pods-starwars-prozi-umbrella.h"
+
+  export *
+  module * { export * }
+}

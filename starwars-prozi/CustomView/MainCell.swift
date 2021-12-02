@@ -20,14 +20,6 @@ class MainCell: UITableViewCell {
         return label
     }()
     
-    let favoriteButton: UIButton = {
-        let btn = UIButton(frame: CGRect(x: 0, y: 0, width: 28, height: 28))
-        btn.backgroundColor = .red
-        btn.setTitleColor(.systemBlue, for: .normal)
-        btn.setTitle("Favorite", for: .normal)
-        return btn
-    }()
-    
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -36,7 +28,6 @@ class MainCell: UITableViewCell {
         
         addSubview(imgLang)
         addSubview(usernameLabel)
-//        addSubview(favoriteButton)
         
         usernameLabel.translatesAutoresizingMaskIntoConstraints = false
         usernameLabel.leadingAnchor.constraint(equalTo: imgLang.trailingAnchor, constant: 8).isActive = true
@@ -50,10 +41,6 @@ class MainCell: UITableViewCell {
         imgLang.topAnchor.constraint(equalTo: self.topAnchor, constant: 8).isActive = true
         imgLang.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8).isActive = true
         
-//        favoriteButton.translatesAutoresizingMaskIntoConstraints = false
-//        favoriteButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 8).isActive = true
-//        favoriteButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
-//        favoriteButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
     }
     
     override func layoutSubviews() {

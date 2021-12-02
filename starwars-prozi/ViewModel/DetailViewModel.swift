@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol DetailViewModelDelegate {
     func reloadData()
@@ -18,6 +19,7 @@ class DetailViewModel {
     private let service: FilmService = FilmService()
     private var movieList: [DetailViewModel.Data]
 
+    public var skinColor: UIColor {content[0][3].detail.color}
     public var title: String {character.name ?? "Character"}
     public let headers = ["Details", "Films"]
     public var content: [[DetailViewModel.Data]] { [data, movieList] }
@@ -28,7 +30,7 @@ class DetailViewModel {
     init(chatacter: Character, hometown: String) {
         self.character = chatacter
         self.data = [ .init(title: "Name", detail: chatacter.name ?? "Unknown"),
-                      .init(title: "Gender", detail: chatacter.gender ?? "Unknown"),
+                      .init(title: "Gender", detail: chatacter.gender),
                       .init(title: "Hometown", detail: hometown),
                       .init(title: "Skin Color", detail: chatacter.skin_color ?? "Unknown")]
         self.movieList = []

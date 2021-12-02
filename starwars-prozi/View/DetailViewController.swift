@@ -38,6 +38,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = model.title
         tableView.dataSource = self
+        tableView.delegate = self
         model.delegate = self
         view.addSubview(tableView)
         view.addSubview(button)
@@ -72,6 +73,12 @@ class DetailViewController: UIViewController {
     }
 }
 
+extension DetailViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){
+        view.tintColor = model.skinColor
+    }
+}
+
 extension DetailViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -91,9 +98,6 @@ extension DetailViewController: UITableViewDataSource {
         cell.textLabel?.text = model.content[indexPath.section][indexPath.row].title
         cell.detailTextLabel?.text =  model.content[indexPath.section][indexPath.row].detail
         cell.textLabel?.font = UIFont(name: "Star Jedi Outline", size: 8)
-//        if indexPath.section == 0 && indexPath.row == 3 {
-//            cell.textLabel?.textColor = model.content[indexPath.section][indexPath.row].detail.color
-//        }
         return cell
     }
 }

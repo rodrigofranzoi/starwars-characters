@@ -10,7 +10,6 @@
 		2A13E3972756B07700D85928 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A13E3962756B07700D85928 /* AppDelegate.swift */; };
 		2A13E3992756B07700D85928 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A13E3982756B07700D85928 /* SceneDelegate.swift */; };
 		2A13E39B2756B07700D85928 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A13E39A2756B07700D85928 /* ViewController.swift */; };
-		2A13E3A12756B07700D85928 /* starwars_prozi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A13E39F2756B07700D85928 /* starwars_prozi.xcdatamodeld */; };
 		2A13E3A32756B07A00D85928 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A13E3A22756B07A00D85928 /* Assets.xcassets */; };
 		2A13E3A62756B07A00D85928 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A13E3A42756B07A00D85928 /* LaunchScreen.storyboard */; };
 		2A13E3B12756B07A00D85928 /* starwars_proziTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A13E3B02756B07A00D85928 /* starwars_proziTests.swift */; };
@@ -34,6 +33,8 @@
 		2AA2FB292757A65E0015E543 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA2FB282757A65E0015E543 /* DetailViewController.swift */; };
 		2AA2FB2C2757A7290015E543 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA2FB2B2757A7290015E543 /* DetailViewModel.swift */; };
 		2AA2FB2E2757B0B40015E543 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA2FB2D2757B0B40015E543 /* Planet.swift */; };
+		2AEC894F27592E0E00963989 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC894E27592E0E00963989 /* FavoritesManager.swift */; };
+		2AEC895527595BA100963989 /* starwars_prozi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC895327595BA100963989 /* starwars_prozi.xcdatamodeld */; };
 		97071B2F7AAB4E63FA576C5D /* Pods_starwars_prozi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BE03EA2DD41EC157D59939 /* Pods_starwars_prozi.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +60,6 @@
 		2A13E3962756B07700D85928 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A13E3982756B07700D85928 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2A13E39A2756B07700D85928 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2A13E3A02756B07700D85928 /* starwars_prozi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = starwars_prozi.xcdatamodel; sourceTree = "<group>"; };
 		2A13E3A22756B07A00D85928 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A13E3A52756B07A00D85928 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A13E3A72756B07A00D85928 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,6 +86,8 @@
 		2AA2FB282757A65E0015E543 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2AA2FB2B2757A7290015E543 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		2AA2FB2D2757B0B40015E543 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		2AEC894E27592E0E00963989 /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
+		2AEC895427595BA100963989 /* starwars_prozi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = starwars_prozi.xcdatamodel; sourceTree = "<group>"; };
 		9A278399B54D411E1AADCE73 /* Pods-starwars-prozi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-starwars-prozi.release.xcconfig"; path = "Target Support Files/Pods-starwars-prozi/Pods-starwars-prozi.release.xcconfig"; sourceTree = "<group>"; };
 		A330DBE595B64F38B89C3A1C /* Pods-starwars-prozi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-starwars-prozi.debug.xcconfig"; path = "Target Support Files/Pods-starwars-prozi/Pods-starwars-prozi.debug.xcconfig"; sourceTree = "<group>"; };
 		B2BE03EA2DD41EC157D59939 /* Pods_starwars_prozi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_starwars_prozi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,7 +156,7 @@
 				2A13E3CD2756CA7B00D85928 /* Model */,
 				2A13E3A42756B07A00D85928 /* LaunchScreen.storyboard */,
 				2A13E3A72756B07A00D85928 /* Info.plist */,
-				2A13E39F2756B07700D85928 /* starwars_prozi.xcdatamodeld */,
+				2AEC895327595BA100963989 /* starwars_prozi.xcdatamodeld */,
 			);
 			path = "starwars-prozi";
 			sourceTree = "<group>";
@@ -206,6 +208,7 @@
 				2A1509B027582399007CAB75 /* FilmServiceProtocols.swift */,
 				2A1509B527585E19007CAB75 /* CharactersServiceProtocols.swift */,
 				2A1509B7275869E0007CAB75 /* PlanetServiceProtocols.swift */,
+				2AEC894E27592E0E00963989 /* FavoritesManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -440,12 +443,13 @@
 				2A13E39B2756B07700D85928 /* ViewController.swift in Sources */,
 				2A3FAF672757C4C200935C34 /* CharacterList.swift in Sources */,
 				2AA2FB222756F6BD0015E543 /* MainCell.swift in Sources */,
+				2AEC895527595BA100963989 /* starwars_prozi.xcdatamodeld in Sources */,
 				2A13E3CA2756CA6600D85928 /* RestManager.swift in Sources */,
+				2AEC894F27592E0E00963989 /* FavoritesManager.swift in Sources */,
 				2A3FAF652757BFE900935C34 /* Species.swift in Sources */,
 				2A1509B127582399007CAB75 /* FilmServiceProtocols.swift in Sources */,
 				2AA2FB2E2757B0B40015E543 /* Planet.swift in Sources */,
 				2A3FAF6A2757CD6600935C34 /* CompletionStatus.swift in Sources */,
-				2A13E3A12756B07700D85928 /* starwars_prozi.xcdatamodeld in Sources */,
 				2A13E3D12756CF7600D85928 /* Character.swift in Sources */,
 				2AA2FB272756FA290015E543 /* StringExtension.swift in Sources */,
 				2A1509BA27586F61007CAB75 /* DeveloperView.swift in Sources */,
@@ -816,12 +820,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		2A13E39F2756B07700D85928 /* starwars_prozi.xcdatamodeld */ = {
+		2AEC895327595BA100963989 /* starwars_prozi.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				2A13E3A02756B07700D85928 /* starwars_prozi.xcdatamodel */,
+				2AEC895427595BA100963989 /* starwars_prozi.xcdatamodel */,
 			);
-			currentVersion = 2A13E3A02756B07700D85928 /* starwars_prozi.xcdatamodel */;
+			currentVersion = 2AEC895427595BA100963989 /* starwars_prozi.xcdatamodel */;
 			path = starwars_prozi.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

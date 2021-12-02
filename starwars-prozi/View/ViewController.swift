@@ -32,6 +32,8 @@ class ViewController: UIViewController {
         setupTableConstraints()
         
         model.loadData()
+        
+        FavoritesManager.shared.retrieveCharacters().map {print($0.url) }
     }
 
     func setupTableConstraints() {
@@ -59,6 +61,22 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        var actions: [UIContextualAction] = []
+        let url = model.characters[indexPath.row].url ?? ""
+        let buttonTitle = FavoritesManager.shared.isFavorited(url: url) ? "Remove Favorite" : "Add Favorite"
+        let favorite = UIContextualAction(style: .normal, title: buttonTitle) { (contextualAction, view, boolValue) in
+//            FavoritesManager.shared.addFavorite(url: url)
+            FavoritesManager.shared.saveCharacter(self.model.characters[indexPath.row])
+            boolValue(true)
+        }
+        favorite.backgroundColor = .systemGreen
+        actions.append(favorite)
+        
+        return UISwipeActionsConfiguration(actions: actions)
+    }
+    
 }
 
 extension ViewController: UITableViewDataSource {

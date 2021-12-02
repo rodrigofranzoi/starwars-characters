@@ -18,9 +18,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             let navController = UINavigationController(rootViewController: ViewController())
             navController.tabBarItem.title = "List"
+            let img = UIImage(named: "star")
+            navController.tabBarItem.image = img
         
             let navController2 = UINavigationController(rootViewController: DeveloperView())
             navController2.tabBarItem.title = "Creator"
+            navController2.tabBarItem.image = UIImage(named: "lightsaber")
+            tabBar.tabBar.backgroundColor = .white
             tabBar.setViewControllers([navController, navController2], animated: true)
             window?.rootViewController = tabBar
         }

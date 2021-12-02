@@ -23,6 +23,8 @@ class DetailViewController: UIViewController {
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setTitle("Google it!", for: .normal)
         btn.titleLabel?.font =  UIFont(name: "Star Jedi Outline", size: 12)
+        btn.layer.borderWidth = 1
+        btn.layer.borderColor = UIColor.black.cgColor
         return btn
     }()
     
@@ -88,6 +90,10 @@ extension DetailViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") ?? UITableViewCell(style: .subtitle, reuseIdentifier: "cell")
         cell.textLabel?.text = model.content[indexPath.section][indexPath.row].title
         cell.detailTextLabel?.text =  model.content[indexPath.section][indexPath.row].detail
+        cell.textLabel?.font = UIFont(name: "Star Jedi Outline", size: 8)
+//        if indexPath.section == 0 && indexPath.row == 3 {
+//            cell.textLabel?.textColor = model.content[indexPath.section][indexPath.row].detail.color
+//        }
         return cell
     }
 }

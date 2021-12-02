@@ -13,7 +13,13 @@ class MainCell: UITableViewCell {
     static let identifier = "MainCell"
     
     let imgLang = UIImageView()
-    let usernameLabel = UILabel()
+    
+    let usernameLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "Star Jedi Outline", size: 12)
+        return label
+    }()
+    
     let favoriteButton: UIButton = {
         let btn = UIButton(frame: CGRect(x: 0, y: 0, width: 28, height: 28))
         btn.backgroundColor = .red

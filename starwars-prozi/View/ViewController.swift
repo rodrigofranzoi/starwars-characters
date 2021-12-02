@@ -71,6 +71,7 @@ extension ViewController: UITableViewDataSource {
         let character = model.characters[indexPath.row]
         cell.usernameLabel.text = character.name ?? "Unknown"
         cell.imgLang.image = nil
+        cell.usernameLabel.textColor = character.gender.color
         RestManager.getLanguageImage(url: character.species?.first) { status in
             switch status {
             case .succeeded(let data):

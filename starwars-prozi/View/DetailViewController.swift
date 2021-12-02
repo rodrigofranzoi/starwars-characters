@@ -22,6 +22,7 @@ class DetailViewController: UIViewController {
         btn.addTarget(self, action: #selector(DetailViewController.didTapGoogle(_:)), for: .touchUpInside)
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.setTitle("Google it!", for: .normal)
+        btn.titleLabel?.font =  UIFont(name: "Star Jedi Outline", size: 12)
         return btn
     }()
     
@@ -33,6 +34,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = model.title
         tableView.dataSource = self
         model.delegate = self
         view.addSubview(tableView)

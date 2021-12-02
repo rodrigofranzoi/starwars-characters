@@ -13,7 +13,7 @@ struct Character: Decodable {
     let edited: String?
     let eye_color: String?
     let films: [String]
-    let gender: String?
+    let gender: String
     let hair_color: String?
     let height: String?
     let homeworld: String

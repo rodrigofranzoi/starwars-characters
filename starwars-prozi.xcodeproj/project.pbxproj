@@ -24,6 +24,7 @@
 		2A1509B627585E19007CAB75 /* CharactersServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1509B527585E19007CAB75 /* CharactersServiceProtocols.swift */; };
 		2A1509B8275869E0007CAB75 /* PlanetServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1509B7275869E0007CAB75 /* PlanetServiceProtocols.swift */; };
 		2A1509BA27586F61007CAB75 /* DeveloperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1509B927586F61007CAB75 /* DeveloperView.swift */; };
+		2A1509BD2758F497007CAB75 /* Starjout-Normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A1509BC2758F46A007CAB75 /* Starjout-Normal.ttf */; };
 		2A3FAF652757BFE900935C34 /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3FAF642757BFE900935C34 /* Species.swift */; };
 		2A3FAF672757C4C200935C34 /* CharacterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3FAF662757C4C200935C34 /* CharacterList.swift */; };
 		2A3FAF6A2757CD6600935C34 /* CompletionStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3FAF692757CD6600935C34 /* CompletionStatus.swift */; };
@@ -75,6 +76,7 @@
 		2A1509B527585E19007CAB75 /* CharactersServiceProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersServiceProtocols.swift; sourceTree = "<group>"; };
 		2A1509B7275869E0007CAB75 /* PlanetServiceProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetServiceProtocols.swift; sourceTree = "<group>"; };
 		2A1509B927586F61007CAB75 /* DeveloperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperView.swift; sourceTree = "<group>"; };
+		2A1509BC2758F46A007CAB75 /* Starjout-Normal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Starjout-Normal.ttf"; sourceTree = "<group>"; };
 		2A3FAF642757BFE900935C34 /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
 		2A3FAF662757C4C200935C34 /* CharacterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterList.swift; sourceTree = "<group>"; };
 		2A3FAF692757CD6600935C34 /* CompletionStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionStatus.swift; sourceTree = "<group>"; };
@@ -140,6 +142,8 @@
 		2A13E3952756B07700D85928 /* starwars-prozi */ = {
 			isa = PBXGroup;
 			children = (
+				2A13E3A22756B07A00D85928 /* Assets.xcassets */,
+				2A1509BB2758F455007CAB75 /* Fonts */,
 				2AA2FB2A2757A7170015E543 /* ViewModel */,
 				2AA2FB232756F9DD0015E543 /* Extensions */,
 				2AA2FB202756F6A40015E543 /* CustomView */,
@@ -148,7 +152,6 @@
 				2A13E3CF2756CA9800D85928 /* Services */,
 				2A13E3CE2756CA8600D85928 /* View */,
 				2A13E3CD2756CA7B00D85928 /* Model */,
-				2A13E3A22756B07A00D85928 /* Assets.xcassets */,
 				2A13E3A42756B07A00D85928 /* LaunchScreen.storyboard */,
 				2A13E3A72756B07A00D85928 /* Info.plist */,
 				2A13E39F2756B07700D85928 /* starwars_prozi.xcdatamodeld */,
@@ -205,6 +208,14 @@
 				2A1509B7275869E0007CAB75 /* PlanetServiceProtocols.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		2A1509BB2758F455007CAB75 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2A1509BC2758F46A007CAB75 /* Starjout-Normal.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		2AA2FB202756F6A40015E543 /* CustomView */ = {
@@ -357,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A13E3A62756B07A00D85928 /* LaunchScreen.storyboard in Resources */,
+				2A1509BD2758F497007CAB75 /* Starjout-Normal.ttf in Resources */,
 				2A13E3A32756B07A00D85928 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,6 +18,7 @@ class DetailViewModel {
     private let service: FilmService = FilmService()
     private var movieList: [DetailViewModel.Data]
 
+    public var title: String {character.name ?? "Character"}
     public let headers = ["Details", "Films"]
     public var content: [[DetailViewModel.Data]] { [data, movieList] }
     public var delegate: DetailViewModelDelegate?

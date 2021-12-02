@@ -15,7 +15,7 @@ class MainCell: UITableViewCell {
     let imgLang = UIImageView()
     let usernameLabel = UILabel()
     let favoriteButton: UIButton = {
-        let btn = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        let btn = UIButton(frame: CGRect(x: 0, y: 0, width: 28, height: 28))
         btn.backgroundColor = .red
         btn.setTitleColor(.systemBlue, for: .normal)
         btn.setTitle("Favorite", for: .normal)
@@ -41,8 +41,8 @@ class MainCell: UITableViewCell {
         
         imgLang.translatesAutoresizingMaskIntoConstraints = false
         imgLang.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8).isActive = true
-        imgLang.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
-        imgLang.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 0).isActive = true
+        imgLang.topAnchor.constraint(equalTo: self.topAnchor, constant: 8).isActive = true
+        imgLang.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8).isActive = true
         
 //        favoriteButton.translatesAutoresizingMaskIntoConstraints = false
 //        favoriteButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 8).isActive = true
@@ -53,8 +53,8 @@ class MainCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        imgLang.heightAnchor.constraint(equalToConstant: self.frame.height).isActive = true
-        imgLang.widthAnchor.constraint(equalToConstant: self.frame.height).isActive = true
+        imgLang.heightAnchor.constraint(equalToConstant: 28).isActive = true
+        imgLang.widthAnchor.constraint(equalToConstant: 28).isActive = true
         imgLang.layer.cornerRadius = imgLang.frame.height/2
         imgLang.clipsToBounds = true
     }

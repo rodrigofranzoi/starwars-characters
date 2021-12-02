@@ -16,11 +16,13 @@ protocol MainViewDelegate {
 
 class MainViewModel {
     
+    public let title = "Characters"
     public var delegate: MainViewDelegate?
     public var characters: [Character] = []
     
-    let characterService = CharactersService()
-    let planetService = PlanetService()
+    private let characterService = CharactersService()
+    private let planetService = PlanetService()
+    
     
     private var selectedIndex: Int?
     

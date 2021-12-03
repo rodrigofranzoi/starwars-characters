@@ -74,6 +74,7 @@ class DetailViewController: UIViewController {
 }
 
 extension DetailViewController: UITableViewDelegate {
+    //set the headercolor according with character skin color
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int){
         view.tintColor = model.skinColor
     }

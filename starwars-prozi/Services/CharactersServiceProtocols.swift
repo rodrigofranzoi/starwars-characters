@@ -55,9 +55,11 @@ class CharactersService: CharactersServiceInput {
                         _ = charList.results.map { output?.addCharacter(character: $0)}
                     }
                 } catch {
+                    self.pageIndex = 1
                     output?.error()
                 }
             case .failure:
+                self.pageIndex = 1
                 output?.error()
             }
         }

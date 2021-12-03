@@ -19,6 +19,8 @@ class RestManager {
     
     static let baseUrl = "https://swapi.dev/api/"
     
+    
+    // We neet to fetch the species language, then fetch the avatar
     static func getLanguageImage(url: String?, response: @escaping (CompletionStatus<Data>)->()) {
         guard let url = url else {
             getUserImg() { status in
@@ -55,9 +57,11 @@ class RestManager {
         }
     }
     
+    //Return an Avatar and save url data in cache
     static func getUserImg(initials: String = "un", completion: @escaping (CompletionStatus<Data>)->()) {
         let url = "https://eu.ui-avatars.com/api/?size=48&name=".appending(initials)
         guard let urlReq = URL(string: url) else { return }
+        //caching the request
         let req = URLRequest(url: urlReq, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 100)
         manager.request(req).responseData { response in
             switch response.result {

@@ -34,7 +34,7 @@
 		2AA2FB2C2757A7290015E543 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA2FB2B2757A7290015E543 /* DetailViewModel.swift */; };
 		2AA2FB2E2757B0B40015E543 /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA2FB2D2757B0B40015E543 /* Planet.swift */; };
 		2AEC894F27592E0E00963989 /* FavoritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC894E27592E0E00963989 /* FavoritesManager.swift */; };
-		2AEC895527595BA100963989 /* starwars_prozi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC895327595BA100963989 /* starwars_prozi.xcdatamodeld */; };
+		2AEC895827595CED00963989 /* starwars_prozi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC895627595CED00963989 /* starwars_prozi.xcdatamodeld */; };
 		97071B2F7AAB4E63FA576C5D /* Pods_starwars_prozi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2BE03EA2DD41EC157D59939 /* Pods_starwars_prozi.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,7 +87,7 @@
 		2AA2FB2B2757A7290015E543 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		2AA2FB2D2757B0B40015E543 /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		2AEC894E27592E0E00963989 /* FavoritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesManager.swift; sourceTree = "<group>"; };
-		2AEC895427595BA100963989 /* starwars_prozi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = starwars_prozi.xcdatamodel; sourceTree = "<group>"; };
+		2AEC895727595CED00963989 /* starwars_prozi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = starwars_prozi.xcdatamodel; sourceTree = "<group>"; };
 		9A278399B54D411E1AADCE73 /* Pods-starwars-prozi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-starwars-prozi.release.xcconfig"; path = "Target Support Files/Pods-starwars-prozi/Pods-starwars-prozi.release.xcconfig"; sourceTree = "<group>"; };
 		A330DBE595B64F38B89C3A1C /* Pods-starwars-prozi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-starwars-prozi.debug.xcconfig"; path = "Target Support Files/Pods-starwars-prozi/Pods-starwars-prozi.debug.xcconfig"; sourceTree = "<group>"; };
 		B2BE03EA2DD41EC157D59939 /* Pods_starwars_prozi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_starwars_prozi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,7 +156,7 @@
 				2A13E3CD2756CA7B00D85928 /* Model */,
 				2A13E3A42756B07A00D85928 /* LaunchScreen.storyboard */,
 				2A13E3A72756B07A00D85928 /* Info.plist */,
-				2AEC895327595BA100963989 /* starwars_prozi.xcdatamodeld */,
+				2AEC895627595CED00963989 /* starwars_prozi.xcdatamodeld */,
 			);
 			path = "starwars-prozi";
 			sourceTree = "<group>";
@@ -443,12 +443,12 @@
 				2A13E39B2756B07700D85928 /* ViewController.swift in Sources */,
 				2A3FAF672757C4C200935C34 /* CharacterList.swift in Sources */,
 				2AA2FB222756F6BD0015E543 /* MainCell.swift in Sources */,
-				2AEC895527595BA100963989 /* starwars_prozi.xcdatamodeld in Sources */,
 				2A13E3CA2756CA6600D85928 /* RestManager.swift in Sources */,
 				2AEC894F27592E0E00963989 /* FavoritesManager.swift in Sources */,
 				2A3FAF652757BFE900935C34 /* Species.swift in Sources */,
 				2A1509B127582399007CAB75 /* FilmServiceProtocols.swift in Sources */,
 				2AA2FB2E2757B0B40015E543 /* Planet.swift in Sources */,
+				2AEC895827595CED00963989 /* starwars_prozi.xcdatamodeld in Sources */,
 				2A3FAF6A2757CD6600935C34 /* CompletionStatus.swift in Sources */,
 				2A13E3D12756CF7600D85928 /* Character.swift in Sources */,
 				2AA2FB272756FA290015E543 /* StringExtension.swift in Sources */,
@@ -820,13 +820,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		2AEC895327595BA100963989 /* starwars_prozi.xcdatamodeld */ = {
+		2AEC895627595CED00963989 /* starwars_prozi.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				2AEC895427595BA100963989 /* starwars_prozi.xcdatamodel */,
+				2AEC895727595CED00963989 /* starwars_prozi.xcdatamodel */,
 			);
-			currentVersion = 2AEC895427595BA100963989 /* starwars_prozi.xcdatamodel */;
-			path = starwars_prozi.xcdatamodeld;
+			currentVersion = 2AEC895727595CED00963989 /* starwars_prozi.xcdatamodel */;
+			name = starwars_prozi.xcdatamodeld;
+			path = "../../../../Downloads/starwars-characters-main/starwars-prozi/starwars_prozi.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

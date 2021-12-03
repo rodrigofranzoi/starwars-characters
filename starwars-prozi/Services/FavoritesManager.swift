@@ -62,7 +62,7 @@ class FavoritesManager {
                 characterList.append(char)
             }
         } catch {
-            print("Fetch Failed")
+            return characterList
         }
         return characterList
     }
@@ -72,17 +72,45 @@ class FavoritesManager {
         let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
         guard let entity = NSEntityDescription.entity(forEntityName: "CharacterData", in: context) else {return}
         let newChar = CharacterData(entity: entity, insertInto: context)
-        newChar.url = char.url
+        newChar.birth_year = char.birth_year
+        newChar.created = char.created
+        newChar.edited = char.edited
+        newChar.eye_color = char.eye_color
+        newChar.gender = char.gender
+        newChar.hair_color = char.hair_color
+        newChar.height = char.height
+        newChar.homeworld = char.homeworld
+        newChar.mass = char.mass
         newChar.name = char.name
-        do
-        {
+        newChar.skin_color = char.skin_color
+        newChar.url = char.url
+        newChar.del = false
+        do {
             try context.save()
-        }
-        catch
-        {
+        } catch {
             print("context save error")
         }
-    
     }
     
+    func deleteFavorites(char: Character) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "CharacterData")
+        do {
+            let results:NSArray = try context.fetch(request) as NSArray
+            for result in results
+            {
+                let c = result as! CharacterData
+                if(c.url == char.url)
+                {
+                    c.del = true
+                    try context.save()
+                }
+            }
+        }
+        catch {
+            print("Fetch Failed")
+        }
+    }
 }

@@ -22,7 +22,9 @@ class MainViewModel {
     
     private let characterService = CharactersService()
     private let planetService = PlanetService()
+    private let favoritesManager = FavoritesManager.shared
     
+    private var offlineMode: Bool = false
     
     private var selectedIndex: Int?
     
@@ -32,12 +34,48 @@ class MainViewModel {
     }
     
     func loadData() {
+        if offlineMode { return }
         characterService.getNextPage()
     }
     
     func cellClicked(atIndex index: Int) {
         selectedIndex = index
         planetService.getPlanet(url: characters[index].homeworld)
+    }
+    
+    func favorited(at index: Int) {
+        guard let url = characters[index].url else { return }
+        if (favoritesManager.isFavorited(url: url) == false) {
+            favoritesManager.addFavorite(url: url)
+            favoritesManager.saveCharacter(characters[index])
+        } else {
+            favoritesManager.removeFavorite(url: url)
+            favoritesManager.deleteFavorites(char: characters[index])
+        }
+        if offlineMode {
+            characters = getDataFromDb()
+            delegate?.reloadTable()
+        }
+    }
+    
+    func getDataFromDb() -> [Character] {
+        var char: [Character] = []
+        for c in favoritesManager.retrieveCharacters() {
+            if c.del == false {
+                char.append(Character(charData: c))
+            }
+        }
+        return char
+    }
+    
+    func buttonForIndex(index: Int) -> String {
+        guard let url = characters[index].url else { return "Favorite" }
+        return favoritesManager.isFavorited(url: url) ? "Remove Favorite" : "Favorite"
+    }
+    
+    func isFavorited(index: Int) -> Bool {
+        guard let url = characters[index].url else { return false }
+        return favoritesManager.isFavorited(url: url)
     }
     
 }
@@ -55,7 +93,9 @@ extension MainViewModel: CharactersServiceOutput {
     }
     
     func error() {
-        
+        offlineMode = true
+        characters = getDataFromDb()
+        delegate?.reloadTable()
     }
 }
 

@@ -17,6 +17,7 @@ extension String {
         return terms.count == 1 ? firstInitial + firstLastInitial : firstInitial + lastInitial
     }
     
+    // define a color to a gender and a color to a skintone
     public var color: UIColor {
         switch self {
         case "male":

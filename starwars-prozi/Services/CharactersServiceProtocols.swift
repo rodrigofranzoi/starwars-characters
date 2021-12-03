@@ -26,13 +26,14 @@ class CharactersService: CharactersServiceInput {
     private var pageIndex: Int
     
     private var isFetching: Bool = false
+    private var stopFetching: Bool { pageIndex >= 9}
     
     init() {
         pageIndex = 1
     }
     
     func getNextPage() {
-        if isFetching == false {
+        if isFetching == false && stopFetching == false {
             getCharactesList(index: pageIndex)
         }
     }
@@ -55,11 +56,11 @@ class CharactersService: CharactersServiceInput {
                         _ = charList.results.map { output?.addCharacter(character: $0)}
                     }
                 } catch {
-                    self.pageIndex = 1
+                    self.pageIndex -= 1
                     output?.error()
                 }
             case .failure:
-                self.pageIndex = 1
+                self.pageIndex -= 1
                 output?.error()
             }
         }

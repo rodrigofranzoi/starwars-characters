@@ -2,6 +2,7 @@
 
 ## Setting favorites
 
-Swipe to left to favorite a character
+Swipe to left to favorite a character.
+Favorite list will be shown case the internet connection fails
 
-![favorite](./Images/favorite.png)
+![favorite](./Images/favorite.png =x2)

@@ -5,7 +5,8 @@
 Swipe to left to favorite a character.
 Favorite list will be retrieved from CoreData if the internet connection fails
 
-![favorite](./Images/favorite.png)
+<img src="Images/favorite.png" width="50%">
+<!-- ![favorite](./Images/favorite.png) -->
 
 ### Caching
 All url requests are cached except for the characters page list.
